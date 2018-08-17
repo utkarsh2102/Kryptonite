@@ -1,2 +1,2 @@
 # Hackiiitd18
-Code for hackathon team kryotpnite
+Code for hackathon team kryptonite
