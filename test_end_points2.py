@@ -12,7 +12,7 @@ yaw.set_servo(19,1520)# pin 35
 
 try: 
    while True:
-       x = int(raw_input("CHECK Pitch: "))
+       x = int(input("CHECK Pitch: "))
        pitch.set_servo(6,x)
 except:
        yaw.stop_servo(19)
