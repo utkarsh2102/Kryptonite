@@ -20,37 +20,37 @@ def arm_with_self_level_on():
     throttle.set_servo(13,min_throttle)  #set to zero
     yaw.set_servo(19,max_yaw)  # set to max  (full right yaw)
     ## others to minimum
-    print 'SElf level on!!!'
-    print 'Display Armed!!!!' 
+    print ("SElf level on!!!")
+    print ("Display Armed!!!!")
 
 def disarm_with_self_level_on():
     roll.set_servo(5,max_roll)  ## hold  aileron to right when arming or disarming.
     sleep(1)
     throttle.set_servo(13,min_throttle) # set to zero
     yaw.set_servo(19,min_yaw)  #set to min (full left yaw))
-    print 'Display Disarmed!!!!'
+    print ("Display Disarmed!!!!")
 try:
- x = raw_input('Are you ready: yes/no') 
- disarm_with_self_level_on() 
- print "Armed!!"
- print "Waiting!!!"
- sleep(1)
+    x = input("Are you ready: yes/no") 
+    disarm_with_self_level_on() 
+    print ("Armed!!")
+    print ("Waiting!!!")
+    sleep(1)
  yaw.set_servo(19,1520)
  roll.set_servo(5,1500)
 #arm_with_self_level_on()
-#print "Disarmed!!"
+#print ("Disarmed!!")
 #except:
  while True:
     #roll.set_servo(5,1520)
-    j = int(raw_input('Th: '))
+    j = int(input("Th: "))
     if(j<1900):
       throttle.set_servo(13,j)
     else: 
       pass
 except:
- yaw.stop_servo(19)
- roll.stop_servo(5)
- pitch.stop_servo(6)
- throttle.stop_servo(13)
+    yaw.stop_servo(19)
+    roll.stop_servo(5)
+    pitch.stop_servo(6)
+    throttle.stop_servo(13)
 PWM.cleanup()       
 
