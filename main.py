@@ -43,13 +43,13 @@ def arm_with_self_level_on():
     throttle.set_servo(13,min_throttle)  #set to zero
     yaw.set_servo(19,min_yaw)  # set to max  (full right yaw)
     ## others to minimum
-    print 'SElf level on!!!'
-    print 'Display Armed!!!!'
+    print ("SElf level on!!!")
+    print ("Display Armed!!!!")
 
 
 
 while True:
-        x = raw_input("Please check for error in KK2.1.5 if any!! Remove them: press arm:  ")
+        x = input("Please check for error in KK2.1.5 if any!! Remove them: press arm:  ")
         if x=="arm":
            print("Arming")
            arm_with_self_level_on()
@@ -57,7 +57,7 @@ while True:
            print("Fool you have to print con!!!.")
            break
         print("\nReady for flying!!!")
-        y = raw_input("Are you ready: yes/no:")
+        y = input("Are you ready: yes/no:")
         if(y=="yes"):
            sleep(1)
            print("Control")
@@ -65,7 +65,7 @@ while True:
            break
 
         while True: 
-                 z = raw_input("Enter value: ")
+                 z = input("Enter value: ")
                  # Throttle up
                  if z == 'w':
                      th = th + 10
@@ -77,7 +77,7 @@ while True:
                         th = max_throttle
                      elif (th > min_throttle & th < max_throttle):
                         throttle.set_servo(13,th)
-                     print 'TH: ' + str(th)
+                     print ("TH: ") + str(th)
                      continue
                  # Throttle down
                  if z == 's':
@@ -90,7 +90,7 @@ while True:
                         th = max_throttle
                     elif (th > min_throttle & th < max_throttle):
                         throttle.set_servo(13,th)
-                    print 'TH: ' + str(th)
+                    print ("TH: ") + str(th)
                     continue
                  
                  # yaw left (positive values)
@@ -104,7 +104,7 @@ while True:
                         ya = max_yaw
                     elif (ya > min_yaw & ya < max_yaw):
                            yaw.set_servo(19,ya)
-                    print 'YA: ' + str(ya)
+                    print ("YA: ") + str(ya)
                     continue
 		# yaw right (negative values)
                  if z == 'd':
@@ -117,7 +117,7 @@ while True:
                         ya = max_yaw
                     elif (ya > min_yaw & ya < max_yaw):
                            yaw.set_servo(19,ya)
-                    print 'YA: ' + str(ya)
+                    print ("YA: ") + str(ya)
                     continue
 
 	         # mapping PI = UP
@@ -131,7 +131,7 @@ while True:
                          pi = max_pitch
                     elif (pi > min_pitch & pi < max_pitch):
                          pitch.set_servo(6,pi)
-                    print 'PI: ' + str(pi)
+                    print ("PI: ") + str(pi)
                     continue
             
                  # mapping PI = DOWN
@@ -145,7 +145,7 @@ while True:
                        pi = max_pitch
                     elif (pi > min_pitch & pi < max_pitch):
                        pitch.set_servo(6,pi)
-                    print 'PI: ' + str(pi)
+                    print ("PI: ") + str(pi)
                     continue
                    
                     # mapping RO = LEFT
@@ -159,7 +159,7 @@ while True:
                           ro = 1900
                        elif (ro > min_roll & ro < max_roll):
                           roll.set_servo(5,ro)
-                       print 'RO: ' + str(ro)
+                       print ("RO: ") + str(ro)
                        continue
                    
                     # mapping RO = RIGHT
@@ -173,7 +173,7 @@ while True:
                           ro = max_roll
                        elif (ro > min_roll & ro < max_roll):
                           roll.set_servo(5,ro)
-                       print 'RO: ' + str(ro)
+                       print ("RO: ") + str(ro)
                        continue
                      
                     # break
