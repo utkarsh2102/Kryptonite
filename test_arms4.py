@@ -16,20 +16,20 @@ def arm():
     throttle.set_servo(13,min_throttle)  #set to zero
     yaw.set_servo(19,max_yaw)  # set to max  (full right yaw)
     ## others to minimun
-    print 'Display Armed!!!!'
+    print ("Display Armed!!!!")
 
 def disarm():
     throttle.set_servo(13,min_throttle) # set to zero
     yaw.set_servo(19,min_yaw)  #set to min (full left yaw))
-    print 'Display Disarmed!!!!'
+    print ("Display Disarmed!!!!")
 try: 
-    x = raw_input("Are you ready: yes/no")
+    x = input("Are you ready: yes/no")
     disarm() 
-    print "Armed!!"
-    print "Waiting!!!"
+    print ("Armed!!")
+    print ("Waiting!!!")
     sleep(10)
     arm()
-    print "Disarmed!!"
+    print ("Disarmed!!")
 except:
        yaw.stop_servo(19)
        roll.stop_servo(5)
