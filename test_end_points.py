@@ -19,16 +19,16 @@ def disarm_with_self_level_on():
     yaw.set_servo(19,1100)
     roll.set_servo(5,1520)  
 
-x = raw_input("Are you ready: ")
+x = input ("Are you ready: ")
 #try: 
 while True:
        disarm_with_self_level_on()
-       x = int(raw_input("CHECK THROTTLE: "))
+       x = int(input("CHECK THROTTLE: "))
        throttle.set_servo(13,x)
 #except:
-throttle.stop_servo(13)
-yaw.stop_servo(19)
-pitch.stop_servo(6)
-roll.stop_servo(5)
+    throttle.stop_servo(13)
+    yaw.stop_servo(19)
+    pitch.stop_servo(6)
+    roll.stop_servo(5)
 PWM.cleanup()       
 
