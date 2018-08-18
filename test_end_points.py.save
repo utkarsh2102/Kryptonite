@@ -13,9 +13,9 @@ yaw.set_servo(19,1520)# pin 35
 
 try: 
    while True:
-       x = raw_input("CHECK THROTTLE: ")
+       x = input("CHECK THROTTLE: ")
        throttle.set_servo(13,x)
-       print 'Set to: ',x
+       print ("Set to: ",x)
 except:
       throttle.stop_servo(13)
       yaw.stop_servo(18PWM.cleanup()       

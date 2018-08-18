@@ -12,7 +12,7 @@ yaw.set_servo(19,1505)# pin 35
 
 try: 
    while True:
-       x = int(raw_input("CHECK Roll: "))
+       x = int(input("CHECK Roll: "))
        roll.set_servo(5,x)
 except:
        yaw.stop_servo(19)
